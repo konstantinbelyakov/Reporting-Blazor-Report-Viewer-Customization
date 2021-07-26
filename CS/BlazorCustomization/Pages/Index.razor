@@ -1,0 +1,40 @@
+﻿@page "/"
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Toolbar Customization</h4>
+            <p class="card-text">Handles the <a href="https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.OnCustomizeToolbar">OnCustomizeToolbar</a> event to create a custom toolbar button that switches the Report Viewer to full-screen mode.</p>
+            <NavLink class="nav-link" href="/toolbar/">
+                Custom Toolbar Button
+            </NavLink>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Parameters Panel Replacement</h4>
+            <p class="card-text">
+                Handles the <a href="https://docs.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-5.0#after-component-render-onafterrenderasync">OnAfterRender</a> event
+                event to hide the Parameters Panel.
+            </p>
+            <p class="card-text">
+                Handles the <a href="https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.OnCustomizeParameters">OnCustomizeParameters</a> event
+                to get the report parameter model. A custom editor is bound to the parameter model and allows the user to specify the parameter value.
+            </p>
+            <NavLink class="nav-link" href="/standalonepanel/">
+                Stand-Alone Parameter Editor
+            </NavLink>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Parameter Editor Template</h4>
+            <p class="card-text">
+                Handles the <a href="https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.OnCustomizeParameters">OnCustomizeParameters</a> event
+                to specify a template for the parameter editor in the Parameters Panel.</p>
+            <NavLink class="nav-link" href="/customeditor/">
+                Custom Parameter Editor in Parameters Panel
+            </NavLink>
+        </div>
+    </div>

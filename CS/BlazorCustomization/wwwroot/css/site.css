@@ -1,0 +1,65 @@
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.main {
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    top: 3.5rem;
+    right: 0;
+    left: 0;
+}
+
+.parameters-panel-custom {
+    height: 2rem;
+    margin: 1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+.fullscreen-enter {
+    background: url('data:image/svg+xml;base64,PHN2ZyBkYXRhLWJpbmQ9InN2Z0F0dHJzIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0xIDEwaDNWNGg2VjFIMXpNNCAxNEgxdjloOXYtM0g0ek0xNCAxdjNoNnY2aDNWMXpNMjAgMjBoLTZ2M2g5di05aC0zeiIgZmlsbD0iI0ZGRiI+PC9wYXRoPjwvc3ZnPg==')
+}

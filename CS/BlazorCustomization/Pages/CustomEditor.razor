@@ -1,0 +1,49 @@
+﻿@page "/customeditor/"
+
+@using DevExpress.Blazor.Reporting
+@using DevExpress.XtraReports.UI
+@using BlazorCustomization.PredefinedReports
+@using DevExpress.Blazor.Reporting.Models
+@using Models
+
+@implements IDisposable
+
+<div @ref="viewerComponent" style="width: 100%; height: 100%">
+    <DxReportViewer @ref="reportViewer"
+                    OnCustomizeParameters="OnCustomizeParameters"
+                    Report="Report"
+                    RootCssClasses="w-100 h-100" />
+</div>
+
+@code {
+    DxReportViewer reportViewer;
+    XtraReport Report = new TableReport();
+    private ElementReference viewerComponent;
+    OrdersModel OrdersModel = new OrdersModel();
+    ParameterModel ParameterModel { get; set; }
+
+    void UnsubscribeParameters() {
+        ParameterModel.ValueChanged -= OnParameterValueChanged;
+    }
+
+    void SubscribeParameters() {
+        ParameterModel.ValueChanged += OnParameterValueChanged;
+    }
+
+    private void OnParameterValueChanged(object sender, EventArgs e) {
+        var changedModel = sender as ParameterModel;
+        OrdersModel.OrderId = (int)changedModel.Value;
+    }
+
+    void OnCustomizeParameters(ParametersModel parameters) {
+        var parameter = parameters.VisibleItems.Where(param => param.Name == "OrderIdParameter").FirstOrDefault();
+        parameter.ValueTemplate = @<CustomCombobox Model=OrdersModel ParameterModel=ParameterModel />;
+        ParameterModel = parameter;
+        SubscribeParameters();
+    }
+
+    public void Dispose() {
+        if(ParameterModel != null)
+            UnsubscribeParameters();
+    }
+}

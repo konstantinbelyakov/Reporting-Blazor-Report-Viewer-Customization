@@ -1,0 +1,18 @@
+﻿@using Models
+@using DevExpress.Blazor.Reporting.Models
+
+<DxComboBox Data="@Model.OrdersData" AllowUserInput="true" @bind-Value="Model.OrderId" TextChanged=OrdersTextChanged CssClass="cw-400 chi-220"></DxComboBox>
+
+@code {
+    [Parameter] public OrdersModel Model { get; set; }
+    [Parameter] public ParameterModel ParameterModel { get; set; }
+
+    void OrdersTextChanged(string val) {
+        try {
+            int id = Int32.Parse(val);
+            Model.OrderId = id;
+            ParameterModel.Value = id;
+        } catch(FormatException) {
+        }
+    }
+}
