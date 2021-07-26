@@ -14,24 +14,25 @@ The example uses the following properties:
 
 | Property | Result |
 |---|---|
-| RootCssClasses |	Sets the component's height and width to 100%. |
-| Zoom |	Sets the initial zoom level to 125%. |
-| SizeMode |	Specifies the medium size of the Report Viewer visual elements. |
-| TabPanelModel |	Gets the Parameters tab in the Properties Panel to hide the tab and do not display the panel.|
+| [RootCssClasses](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.RootCssClasses) |	Sets the component's height and width to 100%. |
+| [Zoom](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.Zoom) |	Sets the initial zoom level to 125%. |
+| [SizeMode](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.SizeMode) |	Specifies the medium size of the Report Viewer visual elements. |
+| [TabPanelModel](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.TabPanelModel) |	Gets the Parameters tab in the Properties Panel to hide the tab and do not display the panel.|
 
 The example uses the following methods:
 
 | Method | Result |
 |---|---|
-| ParametersModel.OnSubmitParameters() |	Applies parameter values and builds the document. |
+| [ParametersModel.OnSubmitParameters](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.Models.ParametersModel.OnSubmitParameters) |	Applies parameter values and builds the document. |
+| [OnAfterRender](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-5.0#after-component-render-onafterrenderasync) |	Gets access to the TabPanelModel property. |
 
 
-The following events are handled:
+The following event is handled:
 
 | Event | Result |
 |---|---|
-| OnCustomizeToolbar |	Adds a custom toolbar button that switches the Report Viewer to full-screen mode. |
-| OnAfterRender |	Gets access to the TabPanelModel property. |
+| [OnCustomizeToolbar](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.OnCustomizeToolbar) |	Adds a custom toolbar button that switches the Report Viewer to full-screen mode. |
+
 
 ## Example: Stand-Alone Parameter Editor
 Related page: [StandAloneParametersPanel.razor](BlazorCustomization/Pages/StandAloneParametersPanel.razor).
@@ -42,14 +43,14 @@ The example uses the following properties:
 
 | Property | Result |
 |---|---|
-| ParametersModel |	Gets the report parameters model. |
-| ParametersModel.VisibleItems |	Provides access to the report parameters that the user can change. |
+| [ParametersModel](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.ParametersModel) |	Gets the report parameters model. |
+| [ParametersModel.VisibleItems](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.Models.ParametersModel.VisibleItems) |	Provides access to the report parameters that the user can change. |
 
 The following events are handled:
 
 | Event | Result |
 |---|---|
-| OnCustomizeParameters |	Gets the Parameter model and stores it in a variable. |
+| [OnCustomizeParameters](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.OnCustomizeParameters) |	Gets the Parameter model and stores it in a variable. |
 
 ## Example: Custom Parameter Editor
 Related page: [CustomEditor.razor](BlazorCustomization/Pages/CustomEditor.razor).
@@ -60,15 +61,15 @@ The example uses the following properties:
 
 | Property | Result |
 |---|---|
-| ParametersModel |	Gets the report parameters model. |
-| ParametersModel.VisibleItems |	Gets the specified parameter model from the parameter collection. |
-| ParameterModel.ValueTemplate |	Specifies the editor template for the parameter in the current model. |
+| [ParametersModel](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.ParametersModel) |	Gets the report parameters model. |
+| [ParametersModel.VisibleItems](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.Models.ParametersModel.VisibleItems)  |	Gets the specified parameter model from the parameter collection. |
+| [ParameterModel.ValueTemplate](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.Models.ParameterModel.ValueTemplate) |	Specifies the editor template for the parameter in the current model. |
 
 The following events are handled:
 
 | Event | Result |
 |---|---|
-| OnCustomizeParameters |	Retrieves a parameter from the Parameter model and specifies a template for the parameter editor. |
+| [OnCustomizeParameters](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.OnCustomizeParameters) |	Retrieves a parameter from the Parameter model and specifies a template for the parameter editor. |
 
 ## How to Run the Example
 
