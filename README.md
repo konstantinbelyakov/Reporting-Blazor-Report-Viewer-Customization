@@ -78,5 +78,6 @@ The following events are handled:
 
 ## How to Run the Example
 
+
 1. Download the project and update the **DevExpress.Blazor.Reporting.Viewer** and **DevExpress.Blazor** NuGet packages.
 2. Build and run the project.
