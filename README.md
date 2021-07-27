@@ -19,12 +19,11 @@ The example uses the following properties:
 | [SizeMode](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.SizeMode) |	Specifies the medium size of the Report Viewer visual elements. |
 | [TabPanelModel](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.TabPanelModel) |	Gets the Parameters tab in the Properties Panel to hide the tab and do not display the panel.|
 
-The example uses the following methods:
+The example uses the following method:
 
 | Method | Result |
 |---|---|
 | [ParametersModel.OnSubmitParameters](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.Models.ParametersModel.OnSubmitParameters) |	Applies parameter values and builds the document. |
-| [OnAfterRender](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-5.0#after-component-render-onafterrenderasync) |	Gets access to the TabPanelModel property. |
 
 
 The following event is handled:
@@ -45,6 +44,12 @@ The example uses the following properties:
 |---|---|
 | [ParametersModel](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportViewer.ParametersModel) |	Gets the report parameters model. |
 | [ParametersModel.VisibleItems](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.Models.ParametersModel.VisibleItems) |	Provides access to the report parameters that the user can change. |
+
+The example uses the following method:
+
+| Method | Result |
+|---|---|
+| [OnAfterRender](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-5.0#after-component-render-onafterrenderasync) |	Gets access to the TabPanelModel property. |
 
 The following events are handled:
 

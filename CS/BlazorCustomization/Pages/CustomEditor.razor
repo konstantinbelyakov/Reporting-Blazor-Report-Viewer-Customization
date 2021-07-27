@@ -36,7 +36,8 @@
     }
 
     void OnCustomizeParameters(ParametersModel parameters) {
-        var parameter = parameters.VisibleItems.Where(param => param.Name == "OrderIdParameter").FirstOrDefault();
+        var parameter = parameters.VisibleItems
+            .Where(param => param.Name == "OrderIdParameter").FirstOrDefault();
         parameter.ValueTemplate = @<CustomCombobox Model=OrdersModel ParameterModel=ParameterModel />;
         ParameterModel = parameter;
         SubscribeParameters();
